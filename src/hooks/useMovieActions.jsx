@@ -1,8 +1,8 @@
 import { url } from "../utils/apiUrl";
 import {toast} from "react-hot-toast"
-
+import { useNavigate } from "react-router-dom";
 const useMovieActions = (getMovies)=>{
-
+  const navigate = useNavigate()
     const deleteMovie = async(id)=>{
         try {
             const response = await fetch(`${url}/${id}`, {
@@ -20,7 +20,7 @@ const useMovieActions = (getMovies)=>{
     }
 
     const handleUpdateMovie = (id)=>{
-        toast.success("Pelicula a actualizar" + id)
+       navigate(`/movie/${id}`);
     }
     return{deleteMovie, handleUpdateMovie}
 }

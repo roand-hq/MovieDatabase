@@ -20,7 +20,7 @@ const Home = () => {
         </div>
       </div>
     );
-
+  console.log(movies);
   return (
     <>
       {/* Botón fijo para agregar */}
@@ -40,37 +40,41 @@ const Home = () => {
         </h1>
 
         {/* Grid con cards */}
-        <div className="row g-4 justify-content-center">
-          {movies?.length === 0 && (
-            <p className="text-center text-muted">
-              No hay películas para mostrar.
-            </p>
-          )}
-          {movies?.map((movie) => (
-            <div
-              key={movie.id}
-              className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center"
-            >
-              <div style={{ width: "18rem" }}>
-                <Card
-                  title={movie.titulo || movie.pelicula}
-                  genre={movie.genero}
-                  year={movie.anio || movie.estreno}
-                  director={movie.director}
-                  rating={movie.calificacion}
-                  onDelete={() => {
-                    if (
-                      window.confirm(`¿Eliminar la película "${movie.titulo || movie.pelicula}"?`)
-                    ) {
-                      deleteMovie(movie.id);
-                    }
-                  }}
-                  onUpdate={() => handleUpdateMovie(movie.id)}
-                />
+          <div className="row g-4 justify-content-center">
+            {movies?.length === 0 && (
+              <p className="text-center text-muted">
+                No hay películas para mostrar.
+              </p>
+            )}
+            {movies?.map((movie) => (
+              <div
+                key={movie.id}
+                className="col-auto"
+              >
+                <div className="w-100" style={{ maxWidth: "24rem" }}>
+                  <Card
+                    title={movie.titulo || movie.pelicula}
+                    genre={movie.genero}
+                    year={movie.anio || movie.estreno}
+                    director={movie.director}
+                    rating={movie.calificacion}
+                    onDelete={() => {
+                      if (
+                        window.confirm(
+                          `¿Eliminar la reseña de la película "${
+                            movie.titulo || movie.pelicula
+                          }"?`
+                        )
+                      ) {
+                        deleteMovie(movie.id);
+                      }
+                    }}
+                    onUpdate={() => handleUpdateMovie(movie.id)}
+                  />
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
       </div>
     </>
   );

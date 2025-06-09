@@ -9,7 +9,7 @@ const Card = ({ title, year, genre, director, rating, onDelete, onUpdate}) => {
   const fullStars = Math.min(safeRating, maxStars); // Aseguramos que no pase de 5
 
   return (
-    <div className="card mb-3" style={{ width: "18rem" }}>
+    <div className="card h-100 w-100" style={{minWidth: "16rem", maxWidth: "24rem"}}>
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <h6 className="card-subtitle mb-2 text-body-secondary">{director}</h6>
@@ -27,8 +27,8 @@ const Card = ({ title, year, genre, director, rating, onDelete, onUpdate}) => {
           ))}
         </div>
 
-        <Button text="Actualizar" onClick={onUpdate} color="primary"></Button>
-        <Button text="Eliminar" onClick={onDelete} color="danger"></Button>
+        <Button text="Actualizar" onClick={onUpdate} color="primary" icon="pencil"></Button>
+        <Button text="Eliminar" onClick={onDelete} color="danger" icon="trash"></Button>
       </div>
     </div>
   );
