@@ -1,12 +1,55 @@
-# React + Vite
+# MovieDatabase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MovieDatabase es una aplicación web para gestionar tus reseñas personales de películas.  
+Puedes crear, actualizar y eliminar reseñas fácilmente desde una interfaz sencilla y amigable.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
 
-## Expanding the ESLint configuration
+- **Crear** nuevas reseñas de películas con título, director, año, género y calificación.  
+- **Actualizar** reseñas existentes para modificar cualquier detalle.  
+- **Eliminar** reseñas que ya no desees conservar.  
+- Visualizar la lista completa de reseñas.  
+- Navegación fluida entre agregar y editar películas.  
+- Validación básica de formularios con react-hook-form.  
+- Notificaciones para el usuario con react-hot-toast.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tecnologías utilizadas
+
+- React  
+- React Router  
+- react-hook-form  
+- react-hot-toast  
+- Fetch API para comunicación con backend (API REST)  
+
+---
+
+## Instalación
+
+1. Clona el repositorio:  
+   ```bash
+   git clone https://github.com/tu-usuario/MovieDatabase.git
+   cd MovieDatabase
+  ```bash
+
+2. Instala dependencias:
+```bash
+npm install
+```bash
+
+3. Ejecuta la aplicación:
+```bash
+npm run dev
+```bash
+
+Abre http://localhost:5173/ en tu navegador.
+
+## Uso
+Para agregar una reseña, ve a la página Agregar Película, completa el formulario y presiona "Guardar".
+
+Para editar una reseña, en la lista de películas presiona el botón "Editar" y se cargará el formulario con los datos de la película para modificar.
+
+Para eliminar una reseña, usa el botón "Eliminar" en la lista.
