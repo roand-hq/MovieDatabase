@@ -35,12 +35,11 @@ Puedes crear, actualizar y eliminar reseñas fácilmente desde una interfaz senc
    cd MovieDatabase
 2. Instala dependencias:
    ```bash
-npm install
+   npm install
    ```bash
-
 3. Ejecuta la aplicación:
    ```bash
-npm run dev
+   npm run dev
    ```bash
 Abre http://localhost:5173/ en tu navegador.
 
