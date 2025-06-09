@@ -36,14 +36,14 @@ Puedes crear, actualizar y eliminar reseñas fácilmente desde una interfaz senc
   ```bash
 
 2. Instala dependencias:
-```bash
+   ```bash
 npm install
-```bash
+   ```bash
 
 3. Ejecuta la aplicación:
-```bash
+   ```bash
 npm run dev
-```bash
+   ```bash
 Abre http://localhost:5173/ en tu navegador.
 
 ## Uso
