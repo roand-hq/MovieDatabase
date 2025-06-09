@@ -33,8 +33,6 @@ Puedes crear, actualizar y eliminar reseñas fácilmente desde una interfaz senc
    ```bash
    git clone https://github.com/tu-usuario/MovieDatabase.git
    cd MovieDatabase
-  ```bash
-
 2. Instala dependencias:
    ```bash
 npm install
